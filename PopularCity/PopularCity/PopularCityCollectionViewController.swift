@@ -64,7 +64,7 @@ final class PopularCityViewController: UIViewController, UICollectionViewDataSou
         
         let layout = UICollectionViewFlowLayout()
         let itemSize = UIScreen.main.bounds.width - (spacing * 3)
-        layout.itemSize = CGSize(width: itemSize / 2, height: itemSize / 2 + 85)
+        layout.itemSize = CGSize(width: itemSize / 2, height: (itemSize / 2) * 1.5)
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = spacing
         layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
