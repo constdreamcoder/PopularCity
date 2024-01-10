@@ -28,4 +28,21 @@ class PopularCityCollectionViewCell: UICollectionViewCell {
         cityDescriptionLabel.textColor = .systemGray2
     }
 
+    // 방법 4
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        cityImageView.layer.cornerRadius = cityImageView.frame.width / 2
+//    }
+    
+    // 방법 3
+//    override func draw(_ rect: CGRect) {
+//        cityImageView.layer.cornerRadius = cityImageView.frame.width / 2
+//    }
+    
+    // 방법2
+    override func setNeedsLayout() {
+        super.setNeedsLayout()
+        cityImageView.layer.cornerRadius = cityImageView.frame.width / 2
+    }
+
 }

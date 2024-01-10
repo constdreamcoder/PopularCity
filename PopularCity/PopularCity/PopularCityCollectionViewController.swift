@@ -19,9 +19,7 @@ final class PopularCityViewController: UIViewController, UICollectionViewDataSou
     
     let wholeCityList: [City] = CityInfo().city
     var sortedCityList: [City] = []
-    
-    var itemSize: CGFloat = 0
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -65,8 +63,8 @@ final class PopularCityViewController: UIViewController, UICollectionViewDataSou
         let spacing: CGFloat = 24
         
         let layout = UICollectionViewFlowLayout()
-        itemSize = (UIScreen.main.bounds.width - (spacing * 3)) / 2
-        layout.itemSize = CGSize(width: itemSize, height: itemSize + 100)
+        let itemSize = UIScreen.main.bounds.width - (spacing * 3)
+        layout.itemSize = CGSize(width: itemSize / 2, height: itemSize / 2 + 85)
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = spacing
         layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
@@ -90,10 +88,14 @@ final class PopularCityViewController: UIViewController, UICollectionViewDataSou
         
         let imageUrl = URL(string: city.city_image)
         cell.cityImageView.kf.setImage(with: imageUrl, placeholder: UIImage(named: "no_image"))
-        cell.cityImageView.layer.cornerRadius = itemSize / 2
         cell.cityNameLabel.text = "\(city.city_name) | \(city.city_english_name)"
         cell.cityDescriptionLabel.text = city.city_explain
-        
+
+        // 방법 1
+//        DispatchQueue.main.async {
+//            cell.cityImageView.layer.cornerRadius = cell.cityImageView.frame.width / 2
+//        }
+
         return cell
     }
     
@@ -106,7 +108,7 @@ final class PopularCityViewController: UIViewController, UICollectionViewDataSou
         if selectedTitle == SegmentControlTitle.domestic.rawValue {
             sortedCityList = wholeCityList.filter { $0.domestic_travel }
         } else if selectedTitle == SegmentControlTitle.overseas.rawValue {
-            sortedCityList = wholeCityList.filter { return ($0.domestic_travel == false) }
+            sortedCityList = wholeCityList.filter { $0.domestic_travel == false }
         }
         
         cityCollectionView.reloadData()
