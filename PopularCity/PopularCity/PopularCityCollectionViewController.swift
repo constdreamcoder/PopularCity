@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-final class PopularCityViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+final class PopularCityViewController: UIViewController {
     
     @IBOutlet weak var topImageView: UIImageView!
     @IBOutlet weak var topTitleLabel: UILabel!
@@ -29,6 +29,10 @@ final class PopularCityViewController: UIViewController, UICollectionViewDataSou
         initializeCityList()
     }
     
+    private func initializeCityList() {
+        sortedCityList = wholeCityList
+    }
+    
     // MARK: - UI Methods
     private func configureTopViewUI() {
         topImageView.image = UIImage(systemName: "ellipsis")
@@ -43,23 +47,42 @@ final class PopularCityViewController: UIViewController, UICollectionViewDataSou
     }
     
     private func configureCollectionView() {
-        
         registerCollectionViewCell()
-        
-        cityCollectionView.delegate = self
-        cityCollectionView.dataSource = self
-        
+        setDelegateAndDatasource()
         configureCollectionViewLayout()
-        
+
         cityCollectionView.showsVerticalScrollIndicator = false
     }
     
-    private func registerCollectionViewCell() {
+    // MARK: - User Event Methods
+    @IBAction func segmentControlTapped(_ sender: UISegmentedControl) {
+        guard let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) else { return }
+        
+        initializeCityList()
+        
+        if selectedTitle == SegmentControlTitle.domestic.rawValue {
+            sortedCityList = wholeCityList.filter { $0.domestic_travel }
+        } else if selectedTitle == SegmentControlTitle.overseas.rawValue {
+            sortedCityList = wholeCityList.filter { $0.domestic_travel == false }
+        }
+        
+        cityCollectionView.reloadData()
+    }
+}
+
+// MARK: - CollectionView UI Configuration Protocol Methods
+extension PopularCityViewController: CollectionViewUIProtocol {
+    func registerCollectionViewCell() {
         let xib = UINib(nibName: PopularCityCollectionViewCell.identifier, bundle: nil)
         cityCollectionView.register(xib, forCellWithReuseIdentifier: PopularCityCollectionViewCell.identifier)
     }
     
-    private func configureCollectionViewLayout() {
+    func setDelegateAndDatasource() {
+        cityCollectionView.delegate = self
+        cityCollectionView.dataSource = self
+    }
+    
+    func configureCollectionViewLayout() {
         let spacing: CGFloat = 24
         
         let layout = UICollectionViewFlowLayout()
@@ -71,12 +94,10 @@ final class PopularCityViewController: UIViewController, UICollectionViewDataSou
         
         cityCollectionView.collectionViewLayout = layout
     }
-    
-    private func initializeCityList() {
-        sortedCityList = wholeCityList
-    }
-    
-    // MARK: - CollectionView Delegate, DataSource Methods
+}
+
+// MARK: - CollectionView Delegate, DataSource Methods
+extension PopularCityViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sortedCityList.count
     }
@@ -97,20 +118,5 @@ final class PopularCityViewController: UIViewController, UICollectionViewDataSou
 //        }
 
         return cell
-    }
-    
-    // MARK: - User Event Methods
-    @IBAction func segmentControlTapped(_ sender: UISegmentedControl) {
-        guard let selectedTitle = sender.titleForSegment(at: sender.selectedSegmentIndex) else { return }
-        
-        initializeCityList()
-        
-        if selectedTitle == SegmentControlTitle.domestic.rawValue {
-            sortedCityList = wholeCityList.filter { $0.domestic_travel }
-        } else if selectedTitle == SegmentControlTitle.overseas.rawValue {
-            sortedCityList = wholeCityList.filter { $0.domestic_travel == false }
-        }
-        
-        cityCollectionView.reloadData()
     }
 }

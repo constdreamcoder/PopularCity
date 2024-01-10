@@ -7,8 +7,8 @@
 
 import UIKit
 
-class PopularCityCollectionViewCell: UICollectionViewCell {
-    static let identifier = String(describing: PopularCityCollectionViewCell.self)
+final class PopularCityCollectionViewCell: UICollectionViewCell {
+    static var identifier = String(describing: PopularCityCollectionViewCell.self)
     
     @IBOutlet weak var cityImageView: UIImageView!
     @IBOutlet weak var cityNameLabel: UILabel!
@@ -17,15 +17,7 @@ class PopularCityCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        cityImageView.contentMode = .scaleAspectFill
-        
-        cityNameLabel.textAlignment = .center
-        cityNameLabel.font = .systemFont(ofSize: 18.0, weight: .bold)
-        
-        cityDescriptionLabel.numberOfLines = 2
-        cityDescriptionLabel.textAlignment = .center
-        cityDescriptionLabel.font = .systemFont(ofSize: 14.0, weight: .semibold)
-        cityDescriptionLabel.textColor = .systemGray2
+        configureCollectionViewCellUI()
     }
 
     // 방법 4
@@ -45,4 +37,18 @@ class PopularCityCollectionViewCell: UICollectionViewCell {
         cityImageView.layer.cornerRadius = cityImageView.frame.width / 2
     }
 
+}
+
+extension PopularCityCollectionViewCell: CollectionViewCellUIProtocol {
+    func configureCollectionViewCellUI() {
+        cityImageView.contentMode = .scaleAspectFill
+        
+        cityNameLabel.textAlignment = .center
+        cityNameLabel.font = .systemFont(ofSize: 18.0, weight: .bold)
+        
+        cityDescriptionLabel.numberOfLines = 2
+        cityDescriptionLabel.textAlignment = .center
+        cityDescriptionLabel.font = .systemFont(ofSize: 14.0, weight: .semibold)
+        cityDescriptionLabel.textColor = .systemGray2
+    }
 }
