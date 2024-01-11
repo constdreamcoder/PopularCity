@@ -8,7 +8,6 @@
 import UIKit
 
 final class PopularCityCollectionViewCell: UICollectionViewCell {
-    static let identifier = String(describing: PopularCityCollectionViewCell.self)
     
     @IBOutlet weak var cityImageView: UIImageView!
     @IBOutlet weak var cityNameLabel: UILabel!
@@ -40,6 +39,8 @@ final class PopularCityCollectionViewCell: UICollectionViewCell {
 }
 
 extension PopularCityCollectionViewCell: CollectionViewCellUIProtocol {
+    static let identifier = String(describing: PopularCityCollectionViewCell.self)
+
     func configureCollectionViewCellUI() {
         cityImageView.contentMode = .scaleAspectFill
         

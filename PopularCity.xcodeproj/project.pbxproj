@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		008D4FB82B4D82350071AEBF /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008D4FB72B4D82350071AEBF /* City.swift */; };
 		008D4FBA2B4D82530071AEBF /* SegmentControlTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008D4FB92B4D82530071AEBF /* SegmentControlTitle.swift */; };
+		00960CD32B4FCF1D002E28BC /* CityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00960CD22B4FCF1D002E28BC /* CityDetailViewController.swift */; };
+		00960CDC2B4FD48A002E28BC /* CityDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00960CDA2B4FD48A002E28BC /* CityDetailTableViewCell.swift */; };
+		00960CDD2B4FD48A002E28BC /* CityDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00960CDB2B4FD48A002E28BC /* CityDetailTableViewCell.xib */; };
+		00960CDF2B4FD61E002E28BC /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00960CDE2B4FD61E002E28BC /* TravelModel.swift */; };
+		00960CE22B4FDB62002E28BC /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00960CE02B4FDB62002E28BC /* AdTableViewCell.swift */; };
+		00960CE32B4FDB62002E28BC /* AdTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00960CE12B4FDB62002E28BC /* AdTableViewCell.xib */; };
+		00960CE52B4FE18E002E28BC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 00960CE42B4FE18E002E28BC /* Kingfisher */; };
+		00960CE72B4FE693002E28BC /* SpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00960CE62B4FE693002E28BC /* SpotViewController.swift */; };
+		00960CE92B4FE6AA002E28BC /* AdvertisementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00960CE82B4FE6AA002E28BC /* AdvertisementViewController.swift */; };
+		0096B2F42B50437100D3CA58 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096B2F32B50437100D3CA58 /* Int+Extension.swift */; };
 		00B02B6F2B4ED33000A6B673 /* CollectionViewCellUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B02B6E2B4ED33000A6B673 /* CollectionViewCellUIProtocol.swift */; };
 		00B02B712B4ED34400A6B673 /* CollectionViewUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B02B702B4ED34400A6B673 /* CollectionViewUIProtocol.swift */; };
 		00E8AECA2B4D325C009B916D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E8AEC92B4D325C009B916D /* AppDelegate.swift */; };
@@ -26,6 +36,15 @@
 /* Begin PBXFileReference section */
 		008D4FB72B4D82350071AEBF /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		008D4FB92B4D82530071AEBF /* SegmentControlTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControlTitle.swift; sourceTree = "<group>"; };
+		00960CD22B4FCF1D002E28BC /* CityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewController.swift; sourceTree = "<group>"; };
+		00960CDA2B4FD48A002E28BC /* CityDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailTableViewCell.swift; sourceTree = "<group>"; };
+		00960CDB2B4FD48A002E28BC /* CityDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityDetailTableViewCell.xib; sourceTree = "<group>"; };
+		00960CDE2B4FD61E002E28BC /* TravelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelModel.swift; sourceTree = "<group>"; };
+		00960CE02B4FDB62002E28BC /* AdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
+		00960CE12B4FDB62002E28BC /* AdTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdTableViewCell.xib; sourceTree = "<group>"; };
+		00960CE62B4FE693002E28BC /* SpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotViewController.swift; sourceTree = "<group>"; };
+		00960CE82B4FE6AA002E28BC /* AdvertisementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementViewController.swift; sourceTree = "<group>"; };
+		0096B2F32B50437100D3CA58 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		00B02B6E2B4ED33000A6B673 /* CollectionViewCellUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellUIProtocol.swift; sourceTree = "<group>"; };
 		00B02B702B4ED34400A6B673 /* CollectionViewUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewUIProtocol.swift; sourceTree = "<group>"; };
 		00E8AEC62B4D325C009B916D /* PopularCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00960CE52B4FE18E002E28BC /* Kingfisher in Frameworks */,
 				00E8AEE12B4D32A2009B916D /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,15 +76,31 @@
 		008D4FBB2B4D841B0071AEBF /* PopularCity */ = {
 			isa = PBXGroup;
 			children = (
+				0096B2F22B50434F00D3CA58 /* Extension */,
 				00E8AEE42B4D3607009B916D /* PopularCityCollectionViewCell.swift */,
 				00E8AEE22B4D35DF009B916D /* PopularCityCollectionViewController.swift */,
+				00960CD22B4FCF1D002E28BC /* CityDetailViewController.swift */,
+				00960CE62B4FE693002E28BC /* SpotViewController.swift */,
+				00960CE82B4FE6AA002E28BC /* AdvertisementViewController.swift */,
 				00B02B742B4ED52800A6B673 /* Scene */,
 				00B02B752B4ED57200A6B673 /* Model */,
 				00B02B732B4ED50D00A6B673 /* Data */,
 				00B02B722B4ED4F500A6B673 /* Protocol */,
 				00B02B762B4ED57D00A6B673 /* Enum */,
+				00960CDA2B4FD48A002E28BC /* CityDetailTableViewCell.swift */,
+				00960CDB2B4FD48A002E28BC /* CityDetailTableViewCell.xib */,
+				00960CE02B4FDB62002E28BC /* AdTableViewCell.swift */,
+				00960CE12B4FDB62002E28BC /* AdTableViewCell.xib */,
 			);
 			path = PopularCity;
+			sourceTree = "<group>";
+		};
+		0096B2F22B50434F00D3CA58 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0096B2F32B50437100D3CA58 /* Int+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		00B02B722B4ED4F500A6B673 /* Protocol */ = {
@@ -79,6 +115,7 @@
 		00B02B732B4ED50D00A6B673 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				00960CDE2B4FD61E002E28BC /* TravelModel.swift */,
 				00E8AEDD2B4D3284009B916D /* CityInfo.swift */,
 			);
 			path = Data;
@@ -156,6 +193,7 @@
 			name = PopularCity;
 			packageProductDependencies = (
 				00E8AEE02B4D32A2009B916D /* Kingfisher */,
+				00960CE42B4FE18E002E28BC /* Kingfisher */,
 			);
 			productName = PopularCity;
 			productReference = 00E8AEC62B4D325C009B916D /* PopularCity.app */;
@@ -203,6 +241,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E8AED62B4D325D009B916D /* LaunchScreen.storyboard in Resources */,
+				00960CDD2B4FD48A002E28BC /* CityDetailTableViewCell.xib in Resources */,
+				00960CE32B4FDB62002E28BC /* AdTableViewCell.xib in Resources */,
 				00E8AED32B4D325D009B916D /* Assets.xcassets in Resources */,
 				00E8AED12B4D325C009B916D /* Main.storyboard in Resources */,
 				00E8AEE72B4D3607009B916D /* PopularCityCollectionViewCell.xib in Resources */,
@@ -216,15 +256,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00960CDC2B4FD48A002E28BC /* CityDetailTableViewCell.swift in Sources */,
+				0096B2F42B50437100D3CA58 /* Int+Extension.swift in Sources */,
 				00E8AEE32B4D35DF009B916D /* PopularCityCollectionViewController.swift in Sources */,
 				008D4FBA2B4D82530071AEBF /* SegmentControlTitle.swift in Sources */,
+				00960CDF2B4FD61E002E28BC /* TravelModel.swift in Sources */,
 				00E8AECA2B4D325C009B916D /* AppDelegate.swift in Sources */,
 				00E8AEDE2B4D3284009B916D /* CityInfo.swift in Sources */,
+				00960CE72B4FE693002E28BC /* SpotViewController.swift in Sources */,
+				00960CD32B4FCF1D002E28BC /* CityDetailViewController.swift in Sources */,
 				00B02B6F2B4ED33000A6B673 /* CollectionViewCellUIProtocol.swift in Sources */,
 				00E8AECC2B4D325C009B916D /* SceneDelegate.swift in Sources */,
+				00960CE22B4FDB62002E28BC /* AdTableViewCell.swift in Sources */,
 				00E8AEE62B4D3607009B916D /* PopularCityCollectionViewCell.swift in Sources */,
 				008D4FB82B4D82350071AEBF /* City.swift in Sources */,
 				00B02B712B4ED34400A6B673 /* CollectionViewUIProtocol.swift in Sources */,
+				00960CE92B4FE6AA002E28BC /* AdvertisementViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +511,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		00960CE42B4FE18E002E28BC /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00E8AEDF2B4D32A2009B916D /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		00E8AEE02B4D32A2009B916D /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 00E8AEDF2B4D32A2009B916D /* XCRemoteSwiftPackageReference "Kingfisher" */;

@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 
 final class PopularCityViewController: UIViewController {
-    
+
     @IBOutlet weak var topImageView: UIImageView!
     @IBOutlet weak var topTitleLabel: UILabel!
     @IBOutlet weak var separatorView: UIView!
@@ -22,11 +22,17 @@ final class PopularCityViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+            
         configureTopViewUI()
         configureCollectionView()
         
         initializeCityList()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = true
     }
     
     private func initializeCityList() {
@@ -118,5 +124,10 @@ extension PopularCityViewController: UICollectionViewDataSource, UICollectionVie
 //        }
 
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cityDetailVC = storyboard?.instantiateViewController(withIdentifier: "CityDetailViewController") as! CityDetailViewController
+        navigationController?.pushViewController(cityDetailVC, animated: true)
     }
 }
