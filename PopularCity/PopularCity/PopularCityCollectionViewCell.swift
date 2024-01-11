@@ -8,7 +8,7 @@
 import UIKit
 
 final class PopularCityCollectionViewCell: UICollectionViewCell {
-    static var identifier = String(describing: PopularCityCollectionViewCell.self)
+    static let identifier = String(describing: PopularCityCollectionViewCell.self)
     
     @IBOutlet weak var cityImageView: UIImageView!
     @IBOutlet weak var cityNameLabel: UILabel!

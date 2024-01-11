@@ -8,6 +8,6 @@
 import Foundation
 
 protocol CollectionViewCellUIProtocol: AnyObject {
-    static var identifier: String { get set }
+    static var identifier: String { get }
     func configureCollectionViewCellUI()
 }
