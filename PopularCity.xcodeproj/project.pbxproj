@@ -76,21 +76,15 @@
 		008D4FBB2B4D841B0071AEBF /* PopularCity */ = {
 			isa = PBXGroup;
 			children = (
-				0096B2F22B50434F00D3CA58 /* Extension */,
 				00E8AEE42B4D3607009B916D /* PopularCityCollectionViewCell.swift */,
 				00E8AEE22B4D35DF009B916D /* PopularCityCollectionViewController.swift */,
-				00960CD22B4FCF1D002E28BC /* CityDetailViewController.swift */,
-				00960CE62B4FE693002E28BC /* SpotViewController.swift */,
-				00960CE82B4FE6AA002E28BC /* AdvertisementViewController.swift */,
+				00C1BE592B504B6D0025D493 /* CityDetail */,
 				00B02B742B4ED52800A6B673 /* Scene */,
 				00B02B752B4ED57200A6B673 /* Model */,
 				00B02B732B4ED50D00A6B673 /* Data */,
 				00B02B722B4ED4F500A6B673 /* Protocol */,
 				00B02B762B4ED57D00A6B673 /* Enum */,
-				00960CDA2B4FD48A002E28BC /* CityDetailTableViewCell.swift */,
-				00960CDB2B4FD48A002E28BC /* CityDetailTableViewCell.xib */,
-				00960CE02B4FDB62002E28BC /* AdTableViewCell.swift */,
-				00960CE12B4FDB62002E28BC /* AdTableViewCell.xib */,
+				0096B2F22B50434F00D3CA58 /* Extension */,
 			);
 			path = PopularCity;
 			sourceTree = "<group>";
@@ -124,6 +118,8 @@
 		00B02B742B4ED52800A6B673 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				00960CE12B4FDB62002E28BC /* AdTableViewCell.xib */,
+				00960CDB2B4FD48A002E28BC /* CityDetailTableViewCell.xib */,
 				00E8AECF2B4D325C009B916D /* Main.storyboard */,
 				00E8AEE52B4D3607009B916D /* PopularCityCollectionViewCell.xib */,
 			);
@@ -144,6 +140,18 @@
 				008D4FB92B4D82530071AEBF /* SegmentControlTitle.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		00C1BE592B504B6D0025D493 /* CityDetail */ = {
+			isa = PBXGroup;
+			children = (
+				00960CD22B4FCF1D002E28BC /* CityDetailViewController.swift */,
+				00960CE62B4FE693002E28BC /* SpotViewController.swift */,
+				00960CE82B4FE6AA002E28BC /* AdvertisementViewController.swift */,
+				00960CDA2B4FD48A002E28BC /* CityDetailTableViewCell.swift */,
+				00960CE02B4FDB62002E28BC /* AdTableViewCell.swift */,
+			);
+			path = CityDetail;
 			sourceTree = "<group>";
 		};
 		00E8AEBD2B4D325C009B916D = {
