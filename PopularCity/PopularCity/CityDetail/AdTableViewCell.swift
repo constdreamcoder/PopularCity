@@ -13,14 +13,22 @@ class AdTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var adLabel: UILabel!
     
+    let backgroundColorList: [UIColor] = [.gray, .lightGray, .blue, .brown, .green, .magenta , .cyan, .systemTeal, .orange, .systemMint, .purple, .yellow]
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        contentView.layer.cornerRadius = 8
+        backgroundColor = backgroundColorList.randomElement()
+        layer.cornerRadius = 8
+        
+        titleLabel.textAlignment = .center
+        titleLabel.font = .systemFont(ofSize: 18, weight: .bold)
+        
         adLabel.layer.cornerRadius = 8
         adLabel.clipsToBounds = true
+        adLabel.text = "AD"
+        adLabel.textAlignment = .center
+        adLabel.font = .systemFont(ofSize: 16, weight: .semibold)
     }
 
-    
-    
 }
