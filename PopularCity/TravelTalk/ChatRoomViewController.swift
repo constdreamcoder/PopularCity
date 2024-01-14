@@ -14,8 +14,7 @@ class ChatRoomViewController: UIViewController {
     @IBOutlet weak var inputTextView: UITextView!
     
     @IBOutlet weak var inputContainerViewBottomConstraint: NSLayoutConstraint!
-    
-    lazy var inputContainerViewBottomConstraintInitialConstant: CGFloat = inputContainerViewBottomConstraint.constant
+    var inputContainerViewBottomConstraintInitialConstant: CGFloat = 0
     
     var chatroomName: String = ""
     var chatList: [Chat] = []
@@ -47,6 +46,8 @@ class ChatRoomViewController: UIViewController {
         chatRoomTableView.register(chatRoomUserTableViewCellXib, forCellReuseIdentifier: ChatRoomUserTableViewCell.identifier)
         
         chatRoomTableView.scrollToRow(at: IndexPath(row: chatList.count - 1, section: 0), at: .bottom, animated: true)
+        
+        inputContainerViewBottomConstraintInitialConstant = inputContainerViewBottomConstraint.constant
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -73,11 +74,12 @@ class ChatRoomViewController: UIViewController {
         if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
-            if #available(iOS 11.0, *) {
-                let bottomInset = UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.safeAreaInsets.bottom ?? 0
+            if #available(iOS 15.0, *) {
+                let bottomInset = view.window?.windowScene?.keyWindow?.safeAreaInsets.bottom ?? 0
                 let adjustedKeyboardHeight = keyboardHeight - bottomInset
                 inputContainerViewBottomConstraint.constant = adjustedKeyboardHeight
-            } else {
+            }
+            else {
                 inputContainerViewBottomConstraint.constant = keyboardHeight
             }
             view.layoutIfNeeded()

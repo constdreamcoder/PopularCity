@@ -37,7 +37,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ha0-tI-rD7">
-                        <rect key="frame" x="198" y="46.333333333333336" width="222" height="33.000000000000007"/>
+                        <rect key="frame" x="198" y="54.333333333333343" width="222" height="33"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="민얼먀너리ㅑㅓㄴ미댜럼니ㅑ더림냐덜" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGf-GO-uc9">
                                 <rect key="frame" x="8" y="8" width="206" height="17"/>
@@ -55,7 +55,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="08:16 오후" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TnU-xY-Ods">
-                        <rect key="frame" x="133.66666666666666" y="65" width="56.333333333333343" height="14.333333333333329"/>
+                        <rect key="frame" x="133.66666666666666" y="73" width="56.333333333333343" height="14.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -65,7 +65,7 @@
                     <constraint firstItem="OCd-V0-o19" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="4wy-wU-046"/>
                     <constraint firstItem="TnU-xY-Ods" firstAttribute="bottom" secondItem="Ha0-tI-rD7" secondAttribute="bottom" id="9Lc-Oi-ama"/>
                     <constraint firstAttribute="trailing" secondItem="Ha0-tI-rD7" secondAttribute="trailing" constant="16" id="Kei-PV-kZT"/>
-                    <constraint firstItem="Ha0-tI-rD7" firstAttribute="top" secondItem="OCd-V0-o19" secondAttribute="bottom" constant="8" id="N8d-UU-gfY"/>
+                    <constraint firstItem="Ha0-tI-rD7" firstAttribute="top" secondItem="OCd-V0-o19" secondAttribute="bottom" constant="16" id="N8d-UU-gfY"/>
                     <constraint firstItem="Ha0-tI-rD7" firstAttribute="leading" secondItem="TnU-xY-Ods" secondAttribute="trailing" constant="8" id="S3p-Jq-L2S"/>
                     <constraint firstItem="OCd-V0-o19" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="VaA-UG-knR"/>
                     <constraint firstItem="TnU-xY-Ods" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="uqI-8l-vJB"/>
