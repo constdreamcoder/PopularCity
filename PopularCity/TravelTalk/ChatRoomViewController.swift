@@ -13,11 +13,15 @@ class ChatRoomViewController: UIViewController {
     @IBOutlet weak var inputContainerView: UIView!
     @IBOutlet weak var inputTextView: UITextView!
     
+    @IBOutlet weak var inputTextViewHeightConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var inputContainerViewBottomConstraint: NSLayoutConstraint!
     var inputContainerViewBottomConstraintInitialConstant: CGFloat = 0
     
     var chatroomName: String = ""
     var chatList: [Chat] = []
+    
+    var initialLineHeightOfInputTextView: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +37,8 @@ class ChatRoomViewController: UIViewController {
         
         inputTextView.text = "메세지를 입력하세요"
         inputTextView.textColor = .lightGray
+        
+        initialLineHeightOfInputTextView = inputTextView.font?.lineHeight ?? 0
         
         chatRoomTableView.delegate = self
         chatRoomTableView.dataSource = self
@@ -159,5 +165,19 @@ extension ChatRoomViewController: UITextViewDelegate {
             textView.textColor = .lightGray
         }
     }
-
+    
+    func textViewDidChange(_ textView: UITextView) {
+        let size = CGSize(width: textView.frame.size.width, height: .infinity)
+        let estimatedSize = textView.sizeThatFits(size)
+        guard textView.contentSize.height < initialLineHeightOfInputTextView * 2 else { textView.isScrollEnabled = true; return }
+        
+        textView.isScrollEnabled = false
+        textView.constraints.forEach { constraint in
+            if constraint.firstAttribute == .height {
+                constraint.constant = estimatedSize.height
+            }
+        }
+    }
+    
+    
 }

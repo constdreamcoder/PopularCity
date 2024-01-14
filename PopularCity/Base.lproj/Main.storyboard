@@ -216,6 +216,9 @@
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QlX-ps-Fqf">
                                                 <rect key="frame" x="8" y="8" width="297" height="34"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="tEJ-K0-pRX"/>
+                                                </constraints>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -233,7 +236,6 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="I1Y-h1-jYP"/>
                                             <constraint firstAttribute="bottom" secondItem="QlX-ps-Fqf" secondAttribute="bottom" constant="8" id="LDc-O1-E0P"/>
                                             <constraint firstAttribute="trailing" secondItem="vqa-eN-CCe" secondAttribute="trailing" constant="8" id="RjG-az-IF5"/>
                                             <constraint firstAttribute="trailing" secondItem="QlX-ps-Fqf" secondAttribute="trailing" constant="40" id="ac0-US-sth"/>
@@ -272,6 +274,7 @@
                         <outlet property="inputContainerView" destination="xBz-YL-zZ5" id="e7P-Fo-huU"/>
                         <outlet property="inputContainerViewBottomConstraint" destination="3FE-AF-J4a" id="Rso-pQ-l8p"/>
                         <outlet property="inputTextView" destination="QlX-ps-Fqf" id="3UM-No-XBz"/>
+                        <outlet property="inputTextViewHeightConstraint" destination="tEJ-K0-pRX" id="9WR-ht-0sO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C0m-zU-akh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
