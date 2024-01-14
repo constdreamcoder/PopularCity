@@ -7,8 +7,8 @@
 
 import UIKit
 
-class TravelChatRoomTableViewCell: UITableViewCell {
-    static let identifier = String(describing: TravelChatRoomTableViewCell.self)
+class TravelTalkChatRoomTableViewCell: UITableViewCell {
+    static let identifier = String(describing: TravelTalkChatRoomTableViewCell.self)
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var chatRoomNameLabel: UILabel!

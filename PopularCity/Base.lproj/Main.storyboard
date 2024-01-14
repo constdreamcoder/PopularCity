@@ -278,41 +278,6 @@
             </objects>
             <point key="canvasLocation" x="3805" y="782"/>
         </scene>
-        <!--Temp View Controller-->
-        <scene sceneID="Jri-Rz-ULZ">
-            <objects>
-                <viewController id="uQN-iM-ssm" customClass="TempViewController" customModule="PopularCity" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="grP-si-K4i">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2mW-FP-IXo">
-                                <rect key="frame" x="0.0" y="784" width="393" height="34"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="BGd-9i-TWs"/>
-                                </constraints>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="BYU-Pf-BQW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="BYU-Pf-BQW" firstAttribute="trailing" secondItem="2mW-FP-IXo" secondAttribute="trailing" id="6Xb-G0-bsc"/>
-                            <constraint firstItem="2mW-FP-IXo" firstAttribute="bottom" secondItem="BYU-Pf-BQW" secondAttribute="bottom" id="6cw-xa-wAJ"/>
-                            <constraint firstItem="2mW-FP-IXo" firstAttribute="leading" secondItem="BYU-Pf-BQW" secondAttribute="leading" id="jSG-6Q-skb"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="textView" destination="2mW-FP-IXo" id="Srq-gx-jEN"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2cH-rB-TUh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5283" y="782"/>
-        </scene>
         <!--Spot View Controller-->
         <scene sceneID="mft-y6-Wjc">
             <objects>

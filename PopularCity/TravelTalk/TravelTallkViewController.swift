@@ -25,8 +25,8 @@ class TravelTallkViewController: UIViewController {
         travelTalkTableView.delegate = self
         travelTalkTableView.dataSource = self
         
-        let travelChatRoomTableViewCellXib = UINib(nibName: TravelChatRoomTableViewCell.identifier, bundle: nil)
-        travelTalkTableView.register(travelChatRoomTableViewCellXib, forCellReuseIdentifier: TravelChatRoomTableViewCell.identifier)
+        let travelChatRoomTableViewCellXib = UINib(nibName: TravelTalkChatRoomTableViewCell.identifier, bundle: nil)
+        travelTalkTableView.register(travelChatRoomTableViewCellXib, forCellReuseIdentifier: TravelTalkChatRoomTableViewCell.identifier)
         
         travelTalkTableView.rowHeight = 80
         travelTalkTableView.showsVerticalScrollIndicator = false
@@ -44,7 +44,7 @@ extension TravelTallkViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TravelChatRoomTableViewCell.identifier, for: indexPath) as! TravelChatRoomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TravelTalkChatRoomTableViewCell.identifier, for: indexPath) as! TravelTalkChatRoomTableViewCell
         
         let chatRoom = mockChatRoomList[indexPath.row]
         
