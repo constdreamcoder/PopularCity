@@ -21,9 +21,10 @@ class CityDetailTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        travelImageView.layer.cornerRadius = 8
         selectionStyle = .none
-        
+
+        travelImageView.layer.cornerRadius = 8
+
         titleLabel.textAlignment = .left
         titleLabel.font = .systemFont(ofSize: 18, weight: .bold)
         

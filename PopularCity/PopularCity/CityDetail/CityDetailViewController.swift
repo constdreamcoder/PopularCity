@@ -57,9 +57,7 @@ extension CityDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let travel = travelList[indexPath.row]
         
-        guard
-            let _ = travel.description
-        else {
+        if travel.ad! {
             let cell = tableView.dequeueReusableCell(withIdentifier: AdTableViewCell.identifier, for: indexPath) as! AdTableViewCell
             cell.titleLabel.text = travel.title
             return cell
@@ -73,15 +71,14 @@ extension CityDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let travel = travelList[indexPath.row]
         
-        guard
-            let _ = travel.description
-        else {
+        if travel.ad! {
             let adVC = storyboard?.instantiateViewController(withIdentifier: "AdvertisementViewController") as! AdvertisementViewController
             let adNavVC = UINavigationController(rootViewController: adVC)
             present(adNavVC, animated: true, completion: nil)
+            tableView.reloadData()
             return
-            
         }
+       
         let spotVC = storyboard?.instantiateViewController(withIdentifier: "SpotViewController") as! SpotViewController
         navigationController?.pushViewController(spotVC, animated: true)
     }

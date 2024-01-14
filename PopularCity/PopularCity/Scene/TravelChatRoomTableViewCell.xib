@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TravelChatRoomTableViewCell" rowHeight="77" id="KGk-i7-Jjw" customClass="TravelChatRoomTableViewCell" customModule="PopularCity" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="318" height="77"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="318" height="77"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bran" translatesAutoresizingMaskIntoConstraints="NO" id="34O-2E-S1M">
+                        <rect key="frame" x="24" y="13.666666666666664" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="fhU-kV-kNe"/>
+                            <constraint firstAttribute="width" secondItem="34O-2E-S1M" secondAttribute="height" multiplier="1:1" id="jjV-Vk-Uve"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BPu-cI-YBW">
+                        <rect key="frame" x="81.999999999999986" y="19.000000000000004" width="134.66666666666663" height="39.333333333333343"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lv2-TN-H90">
+                                <rect key="frame" x="0.0" y="0.0" width="134.66666666666666" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="왜요? 요즈 코딩이 대세인데" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hk-28-zT1">
+                                <rect key="frame" x="0.0" y="24.999999999999996" width="134.66666666666666" height="14.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Lv2-TN-H90" firstAttribute="width" secondItem="BPu-cI-YBW" secondAttribute="width" id="3PX-U9-CTf"/>
+                            <constraint firstItem="9hk-28-zT1" firstAttribute="width" secondItem="BPu-cI-YBW" secondAttribute="width" id="5d1-Cp-2ZU"/>
+                        </constraints>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="2324.01.12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SU-ri-r5k">
+                        <rect key="frame" x="232.66666666666666" y="23" width="61.333333333333343" height="14.333333333333336"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" systemColor="systemGray2Color"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="34O-2E-S1M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="MT9-AY-ySL"/>
+                    <constraint firstItem="BPu-cI-YBW" firstAttribute="leading" secondItem="34O-2E-S1M" secondAttribute="trailing" constant="8" id="Nzx-Ft-rMC"/>
+                    <constraint firstItem="BPu-cI-YBW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="QnF-o1-Cc9"/>
+                    <constraint firstItem="5SU-ri-r5k" firstAttribute="leading" secondItem="BPu-cI-YBW" secondAttribute="trailing" constant="16" id="VMZ-Ne-HPN"/>
+                    <constraint firstItem="34O-2E-S1M" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Y2g-IY-q3g"/>
+                    <constraint firstAttribute="trailing" secondItem="5SU-ri-r5k" secondAttribute="trailing" constant="24" id="hHT-3H-kOA"/>
+                    <constraint firstItem="5SU-ri-r5k" firstAttribute="top" secondItem="BPu-cI-YBW" secondAttribute="top" constant="4" id="sXV-Au-SpU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="chatRoomNameLabel" destination="Lv2-TN-H90" id="z0G-TG-uB9"/>
+                <outlet property="dateLabel" destination="5SU-ri-r5k" id="3zV-5Z-cN1"/>
+                <outlet property="messageLabel" destination="9hk-28-zT1" id="PXe-gc-EmL"/>
+                <outlet property="profileImageView" destination="34O-2E-S1M" id="R9A-1Y-4cV"/>
+            </connections>
+            <point key="canvasLocation" x="7.6335877862595414" y="-95.422535211267615"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Bran" width="460" height="599"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
