@@ -84,10 +84,12 @@ final class PopularCityViewController: UIViewController {
 // MARK: - SearchBar Delegate Methods
 extension PopularCityViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText == "" {
+        let lowercasedSearchText = searchText.lowercased()
+        
+        if lowercasedSearchText == "" {
             sortedCityList = originalSortedCityList
         } else {
-            sortedCityList = originalSortedCityList.filter { $0.city_name.contains(searchText) || $0.city_english_name.contains(searchText) || $0.city_explain.contains(searchText)
+            sortedCityList = originalSortedCityList.filter { $0.city_name.contains(lowercasedSearchText) || $0.city_english_name.lowercased().contains(lowercasedSearchText) || $0.city_explain.contains(lowercasedSearchText)
             }
         }
     
