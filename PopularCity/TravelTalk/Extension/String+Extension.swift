@@ -15,6 +15,7 @@ extension String {
         guard let date = inputDateFormatter.date(from: self) else { return "" }
         
         let outputDateFormatter = DateFormatter()
+        outputDateFormatter.locale = Locale(identifier: "ko-KR")
         outputDateFormatter.dateFormat = "HH:mm a"
         
         return outputDateFormatter.string(from: date)
@@ -27,6 +28,7 @@ extension String {
         guard let date = inputDateFormatter.date(from: self) else { return "" }
         
         let outputDateFormatter = DateFormatter()
+        outputDateFormatter.locale = Locale(identifier: "ko-KR")
         outputDateFormatter.dateFormat = "yy.MM.dd"
         
         return outputDateFormatter.string(from: date)
