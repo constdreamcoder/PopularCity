@@ -107,7 +107,10 @@ extension PopularCityViewController: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let lowercasedSearchText = searchText.lowercased()
+        let trimmedSearchKeywords = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+        if trimmedSearchKeywords == "" { return }
+        
+        let lowercasedSearchText = trimmedSearchKeywords.lowercased()
         
         if lowercasedSearchText == "" {
             sortedCityList = originalSortedCityList
@@ -119,9 +122,12 @@ extension PopularCityViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard
-            searchBar.text != "",
-            let lowercasedSearchText = searchBar.text?.lowercased() else { return }
-            
+            let trimmedSearchKeywords = searchBar.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+            trimmedSearchKeywords != ""
+        else { return }
+        
+        let lowercasedSearchText = trimmedSearchKeywords.lowercased()
+        
         if lowercasedSearchText == "" {
             sortedCityList = originalSortedCityList
         } else {
