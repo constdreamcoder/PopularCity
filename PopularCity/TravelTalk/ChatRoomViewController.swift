@@ -97,6 +97,9 @@ class ChatRoomViewController: UIViewController {
         view.layoutIfNeeded()
     }
     
+    @IBAction func backgroundViewTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
 }
 
 extension ChatRoomViewController: UITableViewDataSource, UITableViewDelegate {
