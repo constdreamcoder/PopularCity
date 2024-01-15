@@ -14,11 +14,14 @@ final class PopularCityViewController: UIViewController {
     @IBOutlet weak var topTitleLabel: UILabel!
     @IBOutlet weak var separatorView: UIView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     @IBOutlet weak var cityCollectionView: UICollectionView!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
-    let wholeCityList: [City] = CityInfo().city
+    let wholeCityList: [City] = CityInfo.city
     var sortedCityList: [City] = []
+    var originalSortedCityList: [City] = CityInfo.city
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +75,22 @@ final class PopularCityViewController: UIViewController {
             sortedCityList = wholeCityList.filter { $0.domestic_travel == false }
         }
         
+        originalSortedCityList = sortedCityList
+        
+        cityCollectionView.reloadData()
+    }
+}
+
+// MARK: - SearchBar Delegate Methods
+extension PopularCityViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == "" {
+            sortedCityList = originalSortedCityList
+        } else {
+            sortedCityList = originalSortedCityList.filter { $0.city_name.contains(searchText) || $0.city_english_name.contains(searchText) || $0.city_explain.contains(searchText)
+            }
+        }
+    
         cityCollectionView.reloadData()
     }
 }
@@ -86,6 +105,8 @@ extension PopularCityViewController: CollectionViewUIProtocol {
     func setDelegateAndDatasource() {
         cityCollectionView.delegate = self
         cityCollectionView.dataSource = self
+        
+        searchBar.delegate = self
     }
     
     func configureCollectionViewLayout() {
