@@ -20,12 +20,19 @@ final class PopularCityViewController: UIViewController {
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
     let wholeCityList: [City] = CityInfo.city
-    var sortedCityList: [City] = []
+    var sortedCityList: [City] = [] {
+        didSet {
+            cityCollectionView.reloadData()
+        }
+    }
     var originalSortedCityList: [City] = CityInfo.city
         
     override func viewDidLoad() {
         super.viewDidLoad()
             
+        configureSearchBar()
+        setSearchBarDelegate()
+        
         configureTopViewUI()
         configureCollectionView()
         
@@ -76,13 +83,29 @@ final class PopularCityViewController: UIViewController {
         }
         
         originalSortedCityList = sortedCityList
-        
-        cityCollectionView.reloadData()
+    }
+}
+
+// MARK: - UISearBar Configuration Methods
+extension PopularCityViewController: SearchBarConfigureProtocol {
+    func configureSearchBar() {
+        searchBar.showsCancelButton = true
+    }
+    
+    func setSearchBarDelegate() {
+        searchBar.delegate = self
+
     }
 }
 
 // MARK: - SearchBar Delegate Methods
 extension PopularCityViewController: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        sortedCityList = originalSortedCityList
+        
+        searchBar.text = nil
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let lowercasedSearchText = searchText.lowercased()
         
@@ -92,8 +115,19 @@ extension PopularCityViewController: UISearchBarDelegate {
             sortedCityList = originalSortedCityList.filter { $0.city_name.contains(lowercasedSearchText) || $0.city_english_name.lowercased().contains(lowercasedSearchText) || $0.city_explain.contains(lowercasedSearchText)
             }
         }
+    }
     
-        cityCollectionView.reloadData()
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard
+            searchBar.text != "",
+            let lowercasedSearchText = searchBar.text?.lowercased() else { return }
+            
+        if lowercasedSearchText == "" {
+            sortedCityList = originalSortedCityList
+        } else {
+            sortedCityList = originalSortedCityList.filter { $0.city_name.contains(lowercasedSearchText) || $0.city_english_name.lowercased().contains(lowercasedSearchText) || $0.city_explain.contains(lowercasedSearchText)
+            }
+        }
     }
 }
 
@@ -107,8 +141,6 @@ extension PopularCityViewController: CollectionViewUIProtocol {
     func setDelegateAndDatasource() {
         cityCollectionView.delegate = self
         cityCollectionView.dataSource = self
-        
-        searchBar.delegate = self
     }
     
     func configureCollectionViewLayout() {

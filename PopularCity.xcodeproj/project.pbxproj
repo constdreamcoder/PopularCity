@@ -41,6 +41,7 @@
 		00E8AEE32B4D35DF009B916D /* PopularCityCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E8AEE22B4D35DF009B916D /* PopularCityCollectionViewController.swift */; };
 		00E8AEE62B4D3607009B916D /* PopularCityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E8AEE42B4D3607009B916D /* PopularCityCollectionViewCell.swift */; };
 		00E8AEE72B4D3607009B916D /* PopularCityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00E8AEE52B4D3607009B916D /* PopularCityCollectionViewCell.xib */; };
+		00F79DCD2B55186600B0D69D /* SearchBarConfigureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F79DCC2B55186600B0D69D /* SearchBarConfigureProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		00E8AEE22B4D35DF009B916D /* PopularCityCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCityCollectionViewController.swift; sourceTree = "<group>"; };
 		00E8AEE42B4D3607009B916D /* PopularCityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCityCollectionViewCell.swift; sourceTree = "<group>"; };
 		00E8AEE52B4D3607009B916D /* PopularCityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCityCollectionViewCell.xib; sourceTree = "<group>"; };
+		00F79DCC2B55186600B0D69D /* SearchBarConfigureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarConfigureProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				00B02B6E2B4ED33000A6B673 /* CollectionViewCellUIProtocol.swift */,
 				00B02B702B4ED34400A6B673 /* CollectionViewUIProtocol.swift */,
+				00F79DCC2B55186600B0D69D /* SearchBarConfigureProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				00E8AEDE2B4D3284009B916D /* CityInfo.swift in Sources */,
 				00960CE72B4FE693002E28BC /* SpotViewController.swift in Sources */,
 				00960CD32B4FCF1D002E28BC /* CityDetailViewController.swift in Sources */,
+				00F79DCD2B55186600B0D69D /* SearchBarConfigureProtocol.swift in Sources */,
 				001576D92B514366005727D4 /* String+Extension.swift in Sources */,
 				001576D02B5128C4005727D4 /* TravelTalkChatRoomTableViewCell.swift in Sources */,
 				00B02B6F2B4ED33000A6B673 /* CollectionViewCellUIProtocol.swift in Sources */,
