@@ -31,31 +31,18 @@ class SearchAmbientCinemaViewController: UIViewController {
     func createActionSheet() {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        let cinemaButton1 = UIAlertAction(title: "메가박스", style: .default) { [weak self] alertAction in
-            guard let weakSelf = self else { return }
-            weakSelf.searchLocation(with: alertAction.title!)
+        CinemaType.allCases.forEach { cinemaType in
+            let cinemaButton = UIAlertAction(title: cinemaType.rawValue, style: .default) { [weak self] alertAction in
+                guard let weakSelf = self else { return }
+                weakSelf.searchLocation(with: alertAction.title!)
+            }
+            alert.addAction(cinemaButton)
         }
-        let cinemaButton2 = UIAlertAction(title: "롯데시네마", style: .default) { [weak self] alertAction in
-            guard let weakSelf = self else { return }
-            weakSelf.searchLocation(with: alertAction.title!)
-            
-        }
-        let cinemaButton3 = UIAlertAction(title: "CGV", style: .default) { [weak self] alertAction in
-            guard let weakSelf = self else { return }
-            weakSelf.searchLocation(with: alertAction.title!)
-        }
-        let cinemaButton4 = UIAlertAction(title: "전체보기", style: .default) { [weak self] alertAction in
-            guard let weakSelf = self else { return }
-            weakSelf.searchLocation(with: alertAction.title!)
-        }
+        
         let cancelButton = UIAlertAction(title: "취소", style: .cancel) { _ in
             print("취소")
         }
-
-        alert.addAction(cinemaButton1)
-        alert.addAction(cinemaButton2)
-        alert.addAction(cinemaButton3)
-        alert.addAction(cinemaButton4)
+        
         alert.addAction(cancelButton)
         
         present(alert, animated: true)

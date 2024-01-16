@@ -31,6 +31,7 @@
 		0096B2F42B50437100D3CA58 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096B2F32B50437100D3CA58 /* Int+Extension.swift */; };
 		00A4AA7F2B56067D007F9516 /* TheaterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4AA7E2B56067D007F9516 /* TheaterData.swift */; };
 		00A4AA822B560725007F9516 /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4AA812B560725007F9516 /* Theater.swift */; };
+		00A4AA852B561043007F9516 /* CinemaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4AA842B561043007F9516 /* CinemaType.swift */; };
 		00B02B6F2B4ED33000A6B673 /* CollectionViewCellUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B02B6E2B4ED33000A6B673 /* CollectionViewCellUIProtocol.swift */; };
 		00B02B712B4ED34400A6B673 /* CollectionViewUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B02B702B4ED34400A6B673 /* CollectionViewUIProtocol.swift */; };
 		00E8AECA2B4D325C009B916D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E8AEC92B4D325C009B916D /* AppDelegate.swift */; };
@@ -72,6 +73,7 @@
 		0096B2F32B50437100D3CA58 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		00A4AA7E2B56067D007F9516 /* TheaterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheaterData.swift; sourceTree = "<group>"; };
 		00A4AA812B560725007F9516 /* Theater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
+		00A4AA842B561043007F9516 /* CinemaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaType.swift; sourceTree = "<group>"; };
 		00B02B6E2B4ED33000A6B673 /* CollectionViewCellUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellUIProtocol.swift; sourceTree = "<group>"; };
 		00B02B702B4ED34400A6B673 /* CollectionViewUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewUIProtocol.swift; sourceTree = "<group>"; };
 		00E8AEC62B4D325C009B916D /* PopularCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +159,14 @@
 				00A4AA812B560725007F9516 /* Theater.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		00A4AA832B56101E007F9516 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				00A4AA842B561043007F9516 /* CinemaType.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		00B02B722B4ED4F500A6B673 /* Protocol */ = {
@@ -280,6 +290,7 @@
 				00F79DCF2B55318800B0D69D /* SearchAmbientCinemaViewController.swift */,
 				00A4AA802B560716007F9516 /* Model */,
 				00A4AA7D2B560673007F9516 /* Data */,
+				00A4AA832B56101E007F9516 /* Enum */,
 			);
 			path = SearchAmbientCinema;
 			sourceTree = "<group>";
@@ -377,6 +388,7 @@
 				00960CDF2B4FD61E002E28BC /* TravelModel.swift in Sources */,
 				00E8AECA2B4D325C009B916D /* AppDelegate.swift in Sources */,
 				001576D62B513282005727D4 /* ChatRoomOtherUserTableViewCell.swift in Sources */,
+				00A4AA852B561043007F9516 /* CinemaType.swift in Sources */,
 				001576D32B5131DD005727D4 /* ChatRoomViewController.swift in Sources */,
 				001576DC2B514917005727D4 /* ChatRoomUserTableViewCell.swift in Sources */,
 				00E8AEDE2B4D3284009B916D /* CityInfo.swift in Sources */,
