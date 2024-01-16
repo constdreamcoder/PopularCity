@@ -12,12 +12,29 @@ final class PopularCityCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cityImageView: UIImageView!
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var cityDescriptionLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
         configureCollectionViewCellUI()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(heightSearchedKeyword), name: .HighlightSearchedKeywords, object: nil)
     }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func heightSearchedKeyword(_ notification: Notification) {
+        if let text = notification.object as? String {
+            let attributedString = NSMutableAttributedString(string: cityNameLabel.text ?? "")
+            print(text)
+            attributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.thick.rawValue, range: ((cityNameLabel.text ?? "") as NSString).range(of:text))
+            
+            cityNameLabel.attributedText = attributedString
+        }
+    }
+    
 
     // 방법 4
 //    override func layoutSubviews() {

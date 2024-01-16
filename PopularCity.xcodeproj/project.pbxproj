@@ -29,6 +29,8 @@
 		00960CE72B4FE693002E28BC /* SpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00960CE62B4FE693002E28BC /* SpotViewController.swift */; };
 		00960CE92B4FE6AA002E28BC /* AdvertisementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00960CE82B4FE6AA002E28BC /* AdvertisementViewController.swift */; };
 		0096B2F42B50437100D3CA58 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096B2F32B50437100D3CA58 /* Int+Extension.swift */; };
+		00A4AA7F2B56067D007F9516 /* TheaterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4AA7E2B56067D007F9516 /* TheaterData.swift */; };
+		00A4AA822B560725007F9516 /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4AA812B560725007F9516 /* Theater.swift */; };
 		00B02B6F2B4ED33000A6B673 /* CollectionViewCellUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B02B6E2B4ED33000A6B673 /* CollectionViewCellUIProtocol.swift */; };
 		00B02B712B4ED34400A6B673 /* CollectionViewUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B02B702B4ED34400A6B673 /* CollectionViewUIProtocol.swift */; };
 		00E8AECA2B4D325C009B916D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E8AEC92B4D325C009B916D /* AppDelegate.swift */; };
@@ -42,6 +44,8 @@
 		00E8AEE62B4D3607009B916D /* PopularCityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E8AEE42B4D3607009B916D /* PopularCityCollectionViewCell.swift */; };
 		00E8AEE72B4D3607009B916D /* PopularCityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00E8AEE52B4D3607009B916D /* PopularCityCollectionViewCell.xib */; };
 		00F79DCD2B55186600B0D69D /* SearchBarConfigureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F79DCC2B55186600B0D69D /* SearchBarConfigureProtocol.swift */; };
+		00F79DD02B55318800B0D69D /* SearchAmbientCinemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F79DCF2B55318800B0D69D /* SearchAmbientCinemaViewController.swift */; };
+		00F79DD22B55403600B0D69D /* NotificationCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F79DD12B55403600B0D69D /* NotificationCenter+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +70,8 @@
 		00960CE62B4FE693002E28BC /* SpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotViewController.swift; sourceTree = "<group>"; };
 		00960CE82B4FE6AA002E28BC /* AdvertisementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementViewController.swift; sourceTree = "<group>"; };
 		0096B2F32B50437100D3CA58 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		00A4AA7E2B56067D007F9516 /* TheaterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheaterData.swift; sourceTree = "<group>"; };
+		00A4AA812B560725007F9516 /* Theater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
 		00B02B6E2B4ED33000A6B673 /* CollectionViewCellUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellUIProtocol.swift; sourceTree = "<group>"; };
 		00B02B702B4ED34400A6B673 /* CollectionViewUIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewUIProtocol.swift; sourceTree = "<group>"; };
 		00E8AEC62B4D325C009B916D /* PopularCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +86,8 @@
 		00E8AEE42B4D3607009B916D /* PopularCityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCityCollectionViewCell.swift; sourceTree = "<group>"; };
 		00E8AEE52B4D3607009B916D /* PopularCityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCityCollectionViewCell.xib; sourceTree = "<group>"; };
 		00F79DCC2B55186600B0D69D /* SearchBarConfigureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarConfigureProtocol.swift; sourceTree = "<group>"; };
+		00F79DCF2B55318800B0D69D /* SearchAmbientCinemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAmbientCinemaViewController.swift; sourceTree = "<group>"; };
+		00F79DD12B55403600B0D69D /* NotificationCenter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +138,25 @@
 			isa = PBXGroup;
 			children = (
 				0096B2F32B50437100D3CA58 /* Int+Extension.swift */,
+				00F79DD12B55403600B0D69D /* NotificationCenter+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		00A4AA7D2B560673007F9516 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				00A4AA7E2B56067D007F9516 /* TheaterData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		00A4AA802B560716007F9516 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00A4AA812B560725007F9516 /* Theater.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		00B02B722B4ED4F500A6B673 /* Protocol */ = {
@@ -239,6 +264,7 @@
 				00E8AEC92B4D325C009B916D /* AppDelegate.swift */,
 				00E8AECB2B4D325C009B916D /* SceneDelegate.swift */,
 				00E8AECF2B4D325C009B916D /* Main.storyboard */,
+				00F79DCE2B55311800B0D69D /* SearchAmbientCinema */,
 				001576C92B512766005727D4 /* TravelTalk */,
 				008D4FBB2B4D841B0071AEBF /* PopularCity */,
 				00E8AED42B4D325D009B916D /* LaunchScreen.storyboard */,
@@ -246,6 +272,16 @@
 				00E8AED72B4D325D009B916D /* Info.plist */,
 			);
 			path = PopularCity;
+			sourceTree = "<group>";
+		};
+		00F79DCE2B55311800B0D69D /* SearchAmbientCinema */ = {
+			isa = PBXGroup;
+			children = (
+				00F79DCF2B55318800B0D69D /* SearchAmbientCinemaViewController.swift */,
+				00A4AA802B560716007F9516 /* Model */,
+				00A4AA7D2B560673007F9516 /* Data */,
+			);
+			path = SearchAmbientCinema;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +371,7 @@
 				00960CDC2B4FD48A002E28BC /* CityDetailTableViewCell.swift in Sources */,
 				0096B2F42B50437100D3CA58 /* Int+Extension.swift in Sources */,
 				001576CB2B512778005727D4 /* TravelTallkViewController.swift in Sources */,
+				00F79DD02B55318800B0D69D /* SearchAmbientCinemaViewController.swift in Sources */,
 				00E8AEE32B4D35DF009B916D /* PopularCityCollectionViewController.swift in Sources */,
 				008D4FBA2B4D82530071AEBF /* SegmentControlTitle.swift in Sources */,
 				00960CDF2B4FD61E002E28BC /* TravelModel.swift in Sources */,
@@ -344,10 +381,13 @@
 				001576DC2B514917005727D4 /* ChatRoomUserTableViewCell.swift in Sources */,
 				00E8AEDE2B4D3284009B916D /* CityInfo.swift in Sources */,
 				00960CE72B4FE693002E28BC /* SpotViewController.swift in Sources */,
+				00F79DD22B55403600B0D69D /* NotificationCenter+Extension.swift in Sources */,
 				00960CD32B4FCF1D002E28BC /* CityDetailViewController.swift in Sources */,
 				00F79DCD2B55186600B0D69D /* SearchBarConfigureProtocol.swift in Sources */,
 				001576D92B514366005727D4 /* String+Extension.swift in Sources */,
+				00A4AA822B560725007F9516 /* Theater.swift in Sources */,
 				001576D02B5128C4005727D4 /* TravelTalkChatRoomTableViewCell.swift in Sources */,
+				00A4AA7F2B56067D007F9516 /* TheaterData.swift in Sources */,
 				00B02B6F2B4ED33000A6B673 /* CollectionViewCellUIProtocol.swift in Sources */,
 				00E8AECC2B4D325C009B916D /* SceneDelegate.swift in Sources */,
 				00960CE22B4FDB62002E28BC /* AdTableViewCell.swift in Sources */,

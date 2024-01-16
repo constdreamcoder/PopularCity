@@ -108,18 +108,20 @@ extension PopularCityViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let trimmedSearchKeywords = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
-        if trimmedSearchKeywords == "" { return }
         
         let lowercasedSearchText = trimmedSearchKeywords.lowercased()
         
         if lowercasedSearchText == "" {
             sortedCityList = originalSortedCityList
         } else {
-            sortedCityList = originalSortedCityList.filter { $0.city_name.contains(lowercasedSearchText) || $0.city_english_name.lowercased().contains(lowercasedSearchText) || $0.city_explain.contains(lowercasedSearchText)
+            sortedCityList = originalSortedCityList.filter {
+                NotificationCenter.default.post(name: .HighlightSearchedKeywords, object: trimmedSearchKeywords, userInfo: nil)
+                
+                return $0.city_name.contains(lowercasedSearchText) || $0.city_english_name.lowercased().contains(lowercasedSearchText) || $0.city_explain.contains(lowercasedSearchText)
             }
         }
     }
-    
+
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard
             let trimmedSearchKeywords = searchBar.text?.trimmingCharacters(in: .whitespacesAndNewlines),
@@ -131,7 +133,8 @@ extension PopularCityViewController: UISearchBarDelegate {
         if lowercasedSearchText == "" {
             sortedCityList = originalSortedCityList
         } else {
-            sortedCityList = originalSortedCityList.filter { $0.city_name.contains(lowercasedSearchText) || $0.city_english_name.lowercased().contains(lowercasedSearchText) || $0.city_explain.contains(lowercasedSearchText)
+            sortedCityList = originalSortedCityList.filter {
+                return $0.city_name.contains(lowercasedSearchText) || $0.city_english_name.lowercased().contains(lowercasedSearchText) || $0.city_explain.contains(lowercasedSearchText)
             }
         }
     }
