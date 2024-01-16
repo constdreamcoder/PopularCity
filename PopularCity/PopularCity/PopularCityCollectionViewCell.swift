@@ -17,22 +17,6 @@ final class PopularCityCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         configureCollectionViewCellUI()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(heightSearchedKeyword), name: .HighlightSearchedKeywords, object: nil)
-    }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
-    @objc func heightSearchedKeyword(_ notification: Notification) {
-        if let text = notification.object as? String {
-            let attributedString = NSMutableAttributedString(string: cityNameLabel.text ?? "")
-            print(text)
-            attributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.thick.rawValue, range: ((cityNameLabel.text ?? "") as NSString).range(of:text))
-            
-            cityNameLabel.attributedText = attributedString
-        }
     }
     
 
@@ -51,6 +35,19 @@ final class PopularCityCollectionViewCell: UICollectionViewCell {
     override func setNeedsLayout() {
         super.setNeedsLayout()
         cityImageView.layer.cornerRadius = cityImageView.frame.width / 2
+    }
+    
+    func changeTextColorPartially(with text: String) {            
+        [
+            cityNameLabel,
+            cityDescriptionLabel
+        ].forEach { label in
+            let attributedString = NSMutableAttributedString(string: label.text ?? "")
+            
+            attributedString.addAttribute(.backgroundColor, value: UIColor.yellow, range: ((label.text ?? "") as NSString).range(of: text))
+            
+            label.attributedText = attributedString
+        }
     }
 
 }

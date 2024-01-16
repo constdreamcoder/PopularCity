@@ -26,7 +26,7 @@ final class PopularCityViewController: UIViewController {
         }
     }
     var originalSortedCityList: [City] = CityInfo.city
-        
+            
     override func viewDidLoad() {
         super.viewDidLoad()
             
@@ -115,8 +115,6 @@ extension PopularCityViewController: UISearchBarDelegate {
             sortedCityList = originalSortedCityList
         } else {
             sortedCityList = originalSortedCityList.filter {
-                NotificationCenter.default.post(name: .HighlightSearchedKeywords, object: trimmedSearchKeywords, userInfo: nil)
-                
                 return $0.city_name.contains(lowercasedSearchText) || $0.city_english_name.lowercased().contains(lowercasedSearchText) || $0.city_explain.contains(lowercasedSearchText)
             }
         }
@@ -174,7 +172,7 @@ extension PopularCityViewController: UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCityCollectionViewCell.identifier, for: indexPath) as! PopularCityCollectionViewCell
-        
+                
         let city = sortedCityList[indexPath.item]
         
         let imageUrl = URL(string: city.city_image)
@@ -182,6 +180,8 @@ extension PopularCityViewController: UICollectionViewDataSource, UICollectionVie
         cell.cityNameLabel.text = "\(city.city_name) | \(city.city_english_name)"
         cell.cityDescriptionLabel.text = city.city_explain
 
+        cell.changeTextColorPartially(with: searchBar.text!)
+        
         // 방법 1
 //        DispatchQueue.main.async {
 //            cell.cityImageView.layer.cornerRadius = cell.cityImageView.frame.width / 2
