@@ -17,6 +17,7 @@
 		001576D92B514366005727D4 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001576D82B514366005727D4 /* String+Extension.swift */; };
 		001576DC2B514917005727D4 /* ChatRoomUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001576DA2B514917005727D4 /* ChatRoomUserTableViewCell.swift */; };
 		001576DD2B514917005727D4 /* ChatRoomUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001576DB2B514917005727D4 /* ChatRoomUserTableViewCell.xib */; };
+		003073F62B610BA0006ACF8E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003073F52B610BA0006ACF8E /* UIViewController+Extension.swift */; };
 		008D4FB82B4D82350071AEBF /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008D4FB72B4D82350071AEBF /* City.swift */; };
 		008D4FBA2B4D82530071AEBF /* SegmentControlTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008D4FB92B4D82530071AEBF /* SegmentControlTitle.swift */; };
 		00960CD32B4FCF1D002E28BC /* CityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00960CD22B4FCF1D002E28BC /* CityDetailViewController.swift */; };
@@ -60,6 +61,7 @@
 		001576D82B514366005727D4 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		001576DA2B514917005727D4 /* ChatRoomUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomUserTableViewCell.swift; sourceTree = "<group>"; };
 		001576DB2B514917005727D4 /* ChatRoomUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomUserTableViewCell.xib; sourceTree = "<group>"; };
+		003073F52B610BA0006ACF8E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		008D4FB72B4D82350071AEBF /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		008D4FB92B4D82530071AEBF /* SegmentControlTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControlTitle.swift; sourceTree = "<group>"; };
 		00960CD22B4FCF1D002E28BC /* CityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,14 @@
 				00B940712B54262900BEB743 /* Data */,
 			);
 			path = TravelTalk;
+			sourceTree = "<group>";
+		};
+		003073F42B610B89006ACF8E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				003073F52B610BA0006ACF8E /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		008D4FBB2B4D841B0071AEBF /* PopularCity */ = {
@@ -290,6 +300,7 @@
 				00F79DCF2B55318800B0D69D /* SearchAmbientCinemaViewController.swift */,
 				00A4AA802B560716007F9516 /* Model */,
 				00A4AA7D2B560673007F9516 /* Data */,
+				003073F42B610B89006ACF8E /* Extension */,
 				00A4AA832B56101E007F9516 /* Enum */,
 			);
 			path = SearchAmbientCinema;
@@ -397,6 +408,7 @@
 				00960CD32B4FCF1D002E28BC /* CityDetailViewController.swift in Sources */,
 				00F79DCD2B55186600B0D69D /* SearchBarConfigureProtocol.swift in Sources */,
 				001576D92B514366005727D4 /* String+Extension.swift in Sources */,
+				003073F62B610BA0006ACF8E /* UIViewController+Extension.swift in Sources */,
 				00A4AA822B560725007F9516 /* Theater.swift in Sources */,
 				001576D02B5128C4005727D4 /* TravelTalkChatRoomTableViewCell.swift in Sources */,
 				00A4AA7F2B56067D007F9516 /* TheaterData.swift in Sources */,
@@ -561,6 +573,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PopularCity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "홀리몰리";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -591,6 +604,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PopularCity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "홀리몰리";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
